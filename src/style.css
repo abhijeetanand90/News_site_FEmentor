@@ -1,96 +1,157 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+/* Remove default margin */
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
   margin: 0;
+  background-color: hsl(36, 37%, 94%);
+}
+
+@font-face {
+  font-family: "InterExbold";
+  src: url("/fonts/static/Inter-ExtraBold.ttf");
+}
+
+@font-face {
+  font-family: "InterRegular";
+  src: url("/public/fonts/static/Inter-Regular.ttf");
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+/* Remove default styles for common elements */
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.container {
+  margin: 50px auto;
+  width: 80%;
+}
+
+nav {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  /* border: 2px dotted red; */
+  justify-content: space-between;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.nav_ul {
+  display: flex;
+  gap: 27px;
+  /* border: 2px dotted lime; */
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.imgresize {
+  max-height: 250px;
+  max-width: 100%;
+}
+main {
+  display: flex;
+  /* border:  dotted red; */
+  margin-top: 50px;
+  gap: 20px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.new_section {
+  /* border: 2px solid limegreen; */
+  background-color: hsl(240, 100%, 5%);
+  color: #fff;
+  flex: 3;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  font-family: "InterRegular";
+  /* justify-content: center; */
+  gap: 40px;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
-}
+.future_section {
+  /* border: 2px solid blue; */
+  display: flex;
+  flex-direction: column;
 
-.card {
-  padding: 2em;
+  flex: 8;
+  /* position: relative; */
 }
-
-.read-the-docs {
-  color: #888;
+.img-desc {
+  display: flex;
+  /* position: absolute; */
+  /* border: 2px solid blue; */
+  padding-top: 20px;
+  justify-content: space-around;
 }
-
+.future-heading {
+  width: 60%;
+  /* border: 2px solid lime; */
+  font-family: "InterExbold";
+  font-size: 40px;
+  align-self: flex-start;
+  /* font-variation-settings: 'wght' 700; */
+}
+.future-text {
+  width: 40%;
+  /* border: 2px solid grey; */
+  /* border:  2px dotted red; */
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
+  background-color: hsl(240, 100%, 5%);
+  color: hsl(36, 100%, 99%);
+  align-self: flex-start;
+  padding: 10px 20px;
+  /* max-width:120px ; */
 }
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.main-text {
+  color: hsl(236, 13%, 42%);
+  /* border:  dotted red; */
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.new_points {
+  p {
+    color: hsl(233, 8%, 79%);
+    font-size: 12px;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+}
+
+.new_flex{
+display: flex;
+flex-direction: column;
+gap: 60px;
 }
