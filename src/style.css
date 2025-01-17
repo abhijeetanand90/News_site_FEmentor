@@ -23,7 +23,12 @@ body {
 
 @font-face {
   font-family: "InterRegular";
-  src: url("/public/fonts/static/Inter-Regular.ttf");
+  src: url("/fonts/static/Inter-Regular.ttf");
+}
+
+@font-face {
+  font-family: 'InterBold';
+  src: url("/public/fonts/static/Inter-Bold.ttf");
 }
 
 img {
@@ -74,6 +79,7 @@ nav {
 .nav_ul {
   display: flex;
   gap: 27px;
+  color: hsl(236, 13%, 42%);
   /* border: 2px dotted lime; */
 }
 
@@ -154,4 +160,40 @@ button {
 display: flex;
 flex-direction: column;
 gap: 60px;
+}
+footer{
+  /* border:2px solid dodgerblue; */
+  margin-top: 50px;
+  display: flex;
+  font-family: "InterRegular";
+  justify-content: space-between;
+
+p{
+  font-size: 12px;
+  color: hsl(236, 13%, 42%);
+
+}
+h5{
+  font-family: 'InterBold';
+}
+
+}
+
+.footer_img{
+max-width: 90px;
+max-height: 100px;
+}
+.footer_options{
+  display: flex;
+
+  h2{
+   color: hsl(5, 85%, 63%); 
+  }
+}
+
+.footer-text{
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
