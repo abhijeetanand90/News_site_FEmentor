@@ -28,7 +28,7 @@ body {
 
 @font-face {
   font-family: 'InterBold';
-  src: url("/public/fonts/static/Inter-Bold.ttf");
+  src: url("/fonts/static/Inter-Bold.ttf");
 }
 
 img {
@@ -105,6 +105,10 @@ main {
   font-family: "InterRegular";
   /* justify-content: center; */
   gap: 40px;
+
+  h1{
+    color:hsl(35, 77%, 62%);
+  }
 }
 .future_section {
   /* border: 2px solid blue; */
@@ -196,4 +200,65 @@ max-height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.nav_menu{
+  display: none;
+}
+
+@media(max-width:700px) {
+ .nav_ul{
+  display: none;
+ }
+ .nav_menu{
+  display: block;
+ }
+
+ main{
+  display: flex;
+  flex-direction: column;
+ }
+ .img-desc {
+  display: flex;
+  flex-direction: column;
+  /* position: absolute; */
+  /* border: 2px solid blue; */
+   button{
+    font-size: 14px;
+    /* text-transform: uppercase; */
+    background-color: hsl(5, 85%, 63%);
+   }
+  
+}
+ footer{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* border: 2px solid red; */
+ }
+
+
+ .future-heading{
+  font-size: 25px;
+  line-height: 1.1;
+  margin-bottom: 10px;
+  
+}
+.imgresize {
+  max-height: 100%;  /* Remove the max-height restriction on mobile */
+  height: auto;      /* Let the height adjust automatically */
+  width: 100%;      /* Ensure full width */
+}
+.future-heading br {
+  display: none;
+
+}
+.future-text {
+  width: 100%;
+  gap: 20px;
+}
+.container{
+  width: 90%;
+}
+
 }
